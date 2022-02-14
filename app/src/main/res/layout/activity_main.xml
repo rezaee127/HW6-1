@@ -11,7 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/editTextFullName"
@@ -85,46 +85,23 @@
             app:layout_constraintStart_toStartOf="@+id/editTextReTypePassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextReTypePassword" />
 
-        <RadioButton
-            android:id="@+id/Female"
-            android:layout_width="97dp"
-            android:layout_height="44dp"
-            android:layout_marginEnd="8dp"
-            android:text="Female"
-            app:layout_constraintBottom_toBottomOf="@+id/Male"
-            app:layout_constraintEnd_toStartOf="@+id/Male"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/Gender"
-            app:layout_constraintTop_toTopOf="@+id/Male"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <RadioButton
-            android:id="@+id/Male"
-            android:layout_width="91dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="132dp"
-            android:text="Male"
-            app:layout_constraintEnd_toEndOf="@+id/editTextReTypePassword"
-            app:layout_constraintTop_toBottomOf="@+id/Gender" />
-
         <Button
             android:id="@+id/register"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:text="Register"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="@+id/editTextReTypePassword"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/Female"
-            app:layout_constraintTop_toBottomOf="@+id/Female" />
+            app:layout_constraintStart_toStartOf="@+id/editTextReTypePassword"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <Button
             android:id="@+id/showInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:text="Show Info"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="@+id/register"
@@ -152,5 +129,30 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.91" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/editTextReTypePassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextReTypePassword"
+            app:layout_constraintTop_toBottomOf="@+id/Gender">
+
+            <RadioButton
+                android:id="@+id/Female"
+                android:layout_width="97dp"
+                android:layout_height="44dp"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/Male"
+                android:layout_width="91dp"
+                android:layout_height="45dp"
+                android:text="Male" />
+        </RadioGroup>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
