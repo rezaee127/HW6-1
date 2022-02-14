@@ -21,6 +21,7 @@
             android:ems="10"
             android:hint="Full Name"
             android:inputType="textPersonName"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@id/guideline3"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -30,11 +31,13 @@
             android:id="@+id/editTextUserName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="user name"
             android:inputType="textPersonName"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextFullName"
             app:layout_constraintTop_toBottomOf="@+id/editTextFullName" />
 
@@ -42,11 +45,13 @@
             android:id="@+id/editTextEmailAddress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/editTextUserName"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextUserName"
             app:layout_constraintTop_toBottomOf="@+id/editTextUserName" />
 
@@ -54,11 +59,13 @@
             android:id="@+id/editTextPassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/editTextEmailAddress"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextEmailAddress"
             app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress" />
 
@@ -66,11 +73,13 @@
             android:id="@+id/editTextReTypePassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="Re-type Password"
             android:inputType="textPassword"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
@@ -78,8 +87,9 @@
             android:id="@+id/Gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
             android:text="Gender"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/editTextReTypePassword"
             app:layout_constraintHorizontal_bias="0.03"
             app:layout_constraintStart_toStartOf="@+id/editTextReTypePassword"
@@ -90,8 +100,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:backgroundTint="@color/purple_700"
             android:text="Register"
             android:textAllCaps="false"
+            app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="@+id/editTextReTypePassword"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextReTypePassword"
@@ -101,9 +113,11 @@
             android:id="@+id/showInfo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/purple_800"
             android:text="Show Info"
             android:textAllCaps="false"
+            app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="@+id/register"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/register"
@@ -144,14 +158,94 @@
                 android:id="@+id/Female"
                 android:layout_width="97dp"
                 android:layout_height="44dp"
-                android:text="Female" />
+                android:text="Female"
+                android:textSize="16sp" />
 
             <RadioButton
                 android:id="@+id/Male"
                 android:layout_width="91dp"
                 android:layout_height="45dp"
-                android:text="Male" />
+                android:text="Male"
+                android:textSize="16sp" />
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="FullName"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/showInfo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/showInfo"
+            app:layout_constraintTop_toBottomOf="@+id/showInfo" />
+
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="UserName"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewFullName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewFullName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFullName" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Email"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUserName" />
+
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Password"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+        <TextView
+            android:id="@+id/textViewGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Gender"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPassword" />
+
+        <Button
+            android:id="@+id/buttonHideInfo"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/purple_300"
+            android:text="Hide Info"
+            android:textAllCaps="false"
+            app:cornerRadius="40dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGender" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
